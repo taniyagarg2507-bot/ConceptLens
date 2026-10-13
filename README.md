@@ -61,7 +61,6 @@ Instead of focusing only on right or wrong answers, the platform encourages stud
 
 ## Project Structure
 
-```text
 ConceptLens/
 ├── index.html
 ├── style.css
