@@ -56,7 +56,7 @@ Instead of focusing only on right or wrong answers, the platform encourages stud
 - HTML – Structure of the website
   
 - CSS – Styling and responsive layout
-- 
+  
 - JavaScript – Dropdowns, question handling, answer checking, and feedback
 
 ## Project Structure
@@ -68,10 +68,10 @@ ConceptLens/
 ├── app.js
 └── README.md
 
-##Team
+## Team
 
-**Prototype**: https://q9kbbqptxac9nhhaapnp6z.streamlit.app/
+## Prototype:https://imaginative-donut-abb94a.netlify.app
 
-**Team Name**: ThinkForge
+### Team Name: ThinkForge
 
-**Problem StatementID**: REG-002-OP-180
+## Problem Statement: REG-002-OP-180
