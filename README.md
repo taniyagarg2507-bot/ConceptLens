@@ -62,12 +62,10 @@ Instead of focusing only on right or wrong answers, the platform encourages stud
 ## Project Structure
 
 ConceptLens
+
 ├── index.html
-
 ├── style.css
-
 ├── app.js
-
 └── README.md
 
 ## Team
