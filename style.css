@@ -1,0 +1,533 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --ink: #17243b;
+  --muted: #69758a;
+  --blue: #365cf5;
+  --blue-dark: #2445d8;
+  --pale: #eef2ff;
+  --line: #e5e9f2;
+  --bg: #f8faff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: var(--ink);
+  font-family: "DM Sans", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* HEADER */
+
+.topbar {
+  min-height: 76px;
+  padding: 14px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #edf0f6;
+}
+
+.brand {
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  font-size: 21px;
+  letter-spacing: -0.7px;
+  white-space: nowrap;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  font-size: 14px;
+  color: #59657a;
+}
+
+nav button {
+  border: 1px solid #cfd7f2;
+  color: var(--blue);
+  background: #ffffff;
+  padding: 10px 15px;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+/* BUTTONS */
+
+.btn {
+  display: inline-block;
+  border: 0;
+  border-radius: 10px;
+  padding: 12px 17px;
+  background: var(--blue);
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: var(--blue-dark);
+  transform: translateY(-1px);
+}
+
+button:focus-visible,
+select:focus-visible,
+a:focus-visible {
+  outline: 3px solid #9eafff;
+  outline-offset: 2px;
+}
+
+/* HERO SECTION */
+
+.hero {
+  padding: 75px 9%;
+  background: linear-gradient(120deg, #f6f8ff, #ffffff 68%);
+}
+
+.eyebrow {
+  margin: 0 0 16px;
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.hero h1 {
+  margin: 0 0 22px;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(34px, 4.4vw, 57px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -2px;
+}
+
+.hero h1 span {
+  color: var(--blue);
+}
+
+.hero > p:not(.eyebrow) {
+  max-width: 650px;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.hero .btn {
+  margin-top: 12px;
+}
+
+/* PRACTICE SECTION */
+
+.practice-section {
+  padding: 72px 9%;
+  background: var(--bg);
+}
+
+.practice-section h2,
+.info-section h2,
+.pricing h2 {
+  margin: 0 0 28px;
+  font-family: "Manrope", sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+/* CLASS, SUBJECT AND TOPIC SELECTORS */
+
+.selectors {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.selectors label {
+  color: #68748a;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.selectors select {
+  display: block;
+  width: 100%;
+  margin-top: 9px;
+  padding: 13px;
+  border: 1px solid #dfe4ef;
+  border-radius: 10px;
+  background: #ffffff;
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 14px;
+}
+
+/* QUESTION CARD */
+
+.question-card {
+  max-width: 900px;
+  padding: 29px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 10px 30px #1e376408;
+}
+
+#subjectBadge {
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+#questionCount {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.question-card h3 {
+  margin: 23px 0 6px;
+  font-family: "Manrope", sans-serif;
+  font-size: 23px;
+  line-height: 1.5;
+}
+
+#questionHint {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* ANSWER OPTIONS */
+
+.options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 11px;
+  margin: 23px 0;
+}
+
+.option {
+  padding: 14px;
+  text-align: left;
+  border: 1px solid #e0e5ef;
+  border-radius: 10px;
+  background: #ffffff;
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.option:hover,
+.option.selected {
+  border-color: var(--blue);
+  background: #f4f6ff;
+}
+
+/* FEEDBACK */
+
+.feedback {
+  margin-top: 22px;
+  padding: 18px;
+  border: 1px solid #dce5ff;
+  border-radius: 12px;
+  background: #f2f6ff;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.feedback.good {
+  border-color: #c9efdc;
+  background: #effaf5;
+}
+
+.feedback h4 {
+  margin: 0 0 8px;
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+}
+
+.feedback p {
+  margin: 7px 0;
+}
+
+/* CONFIDENCE CHECK */
+
+#confidenceBlock {
+  margin: 15px 0;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fafbff;
+}
+
+#confidenceBlock h4 {
+  font-size: 14px;
+}
+
+#confidenceOptions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+#confidenceOptions button {
+  padding: 9px;
+  border: 1px solid #dce2ef;
+  border-radius: 8px;
+  background: #ffffff;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+#confidenceOptions button.chosen {
+  border-color: var(--blue);
+  background: var(--pale);
+  color: var(--blue);
+}
+
+#confidenceNote {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* HOW IT WORKS */
+
+.info-section {
+  padding: 65px 9%;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.steps article {
+  padding: 23px 20px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #ffffff;
+}
+
+.steps h3 {
+  margin: 10px 0;
+  font-family: "Manrope", sans-serif;
+  font-size: 17px;
+}
+
+.steps p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* PRICING */
+
+.pricing {
+  padding: 65px 9%;
+  background: #fafbff;
+}
+
+.pricing h2 {
+  margin-bottom: 28px;
+}
+
+.price-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  max-width: 800px;
+}
+
+.price-card {
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: 17px;
+  background: #ffffff;
+}
+
+.price-card h3 {
+  font-family: "Manrope", sans-serif;
+  font-size: 28px;
+}
+
+.price-card p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* PRIVACY SECTION */
+
+#privacy {
+  background: #17243b;
+  color: #ffffff;
+}
+
+#privacy p {
+  max-width: 750px;
+  color: #c2cada;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* MODALS */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: #111b32b8;
+}
+
+.modal[hidden] {
+  display: none;
+}
+
+.modal-card {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  padding: 35px;
+  border-radius: 20px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.modal-card h2 {
+  font-family: "Manrope", sans-serif;
+  font-size: 25px;
+  line-height: 1.4;
+}
+
+.modal-card p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+#adTimer {
+  color: var(--blue);
+  font-family: "Manrope", sans-serif;
+  font-size: 42px;
+  font-weight: 800;
+}
+
+#closeAd:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+#skipAd {
+  display: block;
+  margin: 12px auto 0;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+#closePlanX {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 760px) {
+  .topbar {
+    padding: 14px 5%;
+  }
+
+  nav {
+    gap: 10px;
+  }
+
+  nav a {
+    display: none;
+  }
+
+  .hero,
+  .practice-section,
+  .info-section,
+  .pricing {
+    padding: 45px 6%;
+  }
+
+  .hero h1 {
+    letter-spacing: -1px;
+  }
+
+  .selectors,
+  .steps,
+  .price-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .question-card {
+    padding: 20px;
+  }
+
+  .options {
+    grid-template-columns: 1fr;
+  }
+
+  .practice-section h2,
+  .info-section h2,
+  .pricing h2 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .selectors,
+  .steps,
+  .price-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .question-card h3 {
+    font-size: 20px;
+  }
+
+  .question-card .btn {
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  .modal-card {
+    padding: 25px 18px;
+  }
+}

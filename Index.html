@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ConceptLens</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#">◈ ConceptLens</a>
+    <nav>
+      <a href="#practice">Practice</a>
+      <a href="#privacy">Privacy</a>
+      <button id="openPlanTop">Ad-free plan</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">CBSE CLASSES 9–12</p>
+      <h1>Understand your answers,<br>
+        <span>not just the solutions.</span>
+      </h1>
+      <p>Discover mistakes in concepts, calculations,
+        signs and units with ConceptLens.</p>
+      <a class="btn" href="#practice">Start practising →</a>
+    </section>
+
+    <section id="practice" class="practice-section">
+      <h2>Your learning space</h2>
+
+      <div class="selectors">
+        <label>Class
+          <select id="classSelect">
+            <option value="9">Class 9</option>
+            <option value="10">Class 10</option>
+            <option value="11">Class 11</option>
+            <option value="12">Class 12</option>
+          </select>
+        </label>
+
+        <label>Subject
+          <select id="subjectSelect">
+            <option value="">Select subject</option>
+          </select>
+        </label>
+
+        <label>Topic
+          <select id="topicSelect">
+            <option value="">Select topic</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="question-card">
+        <p id="subjectBadge">Select Subject</p>
+        <p id="questionCount">Answered 0 questions</p>
+        <p id="questionNumber"></p>
+        <h3 id="questionText">Choose your topic to begin.</h3>
+        <p id="questionHint">Choose your answer.</p>
+
+        <div id="options" class="options"></div>
+
+        <button id="startButton" type="button">
+            Start Practice
+        </button>
+        <button id="submitButton" type="button" hidden>
+            Submit Answer
+        </button>
+
+        <div id="confidenceBlock" hidden>
+          <h4>How did you choose your answer?</h4>
+          <div id="confidenceOptions"></div>
+          <p id="confidenceNote"></p>
+        </div>
+
+        <button id="checkButton" class="btn">
+          Check my thinking
+        </button>
+
+        <button id="nextButton" class="btn" hidden>
+          Next question
+        </button>
+
+        <div id="feedback" class="feedback" hidden></div>
+      </div>
+    </section>
+
+    <section class="info-section">
+      <h2>How ConceptLens works</h2>
+      <div class="steps">
+        <article>
+          <h3>01. Answer</h3>
+          <p>Try a practice question.</p>
+        </article>
+        <article>
+          <h3>02. Diagnose</h3>
+          <p>Discover a possible mistake.</p>
+        </article>
+        <article>
+          <h3>03. Understand</h3>
+          <p>Learn the concept behind it.</p>
+        </article>
+        <article>
+          <h3>04. Improve</h3>
+          <p>Reflect and practise again.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="privacy" class="info-section">
+      <h2>Your privacy matters</h2>
+      <p>
+        This demo does not require an account or send your
+        answers to a server. No database is connected.
+      </p>
+    </section>
+
+    <section class="pricing">
+      <h2>Learning should be affordable</h2>
+      <div class="steps">
+        <article>
+          <h3>Free learning</h3>
+          <p>₹0 — includes a simulated ad break.</p>
+          <button id="continueFree" class="btn">
+            Continue free
+          </button>
+        </article>
+
+        <article>
+          <h3>Ad-free plan</h3>
+          <p>Subscription option planned for the future.</p>
+          <button id="openPlan" class="btn">
+            Explore plan
+          </button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div id="adModal" class="modal" hidden>
+    <div class="modal-card">
+      <h2>Demo advertisement break</h2>
+      <p>No real advertisement is loaded.</p>
+      <h2 id="adTimer">40</h2>
+      <button id="closeAd" class="btn" disabled>
+        Continue in 40s
+      </button>
+      <button id="skipAd">Skip demo timer</button>
+    </div>
+  </div>
+
+  <div id="planModal" class="modal" hidden>
+    <div class="modal-card">
+      <button id="closePlanX">×</button>
+      <h2>Ad-free learning plan</h2>
+      <p>Subscriptions and payments are not enabled yet.</p>
+      <button id="closePlanButton" class="btn">Got it</button>
+    </div>
+  </div>
+
+  <button id="explorePlan">Explore Plan</button>
+
+  <script src="app.js"></script>
+</body>
+</html>
